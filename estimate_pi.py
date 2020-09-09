@@ -2,7 +2,7 @@ import random
 
 
 def estimate(n):
-    inner_circle, total_point = 0, 0
+    inner_circle = 0
     for i in range(n):
         x = random.uniform(0, 1)
         y = random.uniform(0, 1)
@@ -10,7 +10,7 @@ def estimate(n):
             inner_circle += 1
         total_point += 1
     
-    return 4 * inner_circle / total_point
+    return 4 * inner_circle / n
     
 
 if __name__ == '__main__':
